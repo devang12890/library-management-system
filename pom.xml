@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.example</groupId>
+	<artifactId>library-spring</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>library-spring</name>
+	<description>Library Management System - Spring Boot</description>
+
+	<!-- Use Spring Boot 4.0.1 (matches your logs) -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>4.0.1</version>
+		<relativePath/>
+	</parent>
+
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<dependencies>
+		<!-- Web (REST APIs / controllers) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- JPA / Hibernate -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- H2 in-memory database (this fixes your error) -->
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>2.2.224</version> <!-- or any recent 2.x -->
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Optional: testing -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Maven plugin for Spring Boot -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
