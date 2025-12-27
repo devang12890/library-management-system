@@ -26,5 +26,3 @@ This project follows **clean architecture**, **RESTful APIs**, and **industry-st
 
 ---
 
-## 📂 Project Structure
-
